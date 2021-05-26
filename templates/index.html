@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forex Converter</title>
+</head>
+<body>
+<h1>Forex Converter</h1>
+
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+<form action="/converted" method="POST">
+    <p>Amount to Convert <input type="input" name="amount" placeholder="Example: 100"> </p>
+    <p>Converting From <input type="input" name="value1" placeholder="Example: USD"> </p>
+    <p>Converting To <input type="input" name="value2" placeholder="Example: GBP"> </p>
+    </select>
+    <button>Convert</button>
+</form>
+
+
+
+</body>
+</html>
